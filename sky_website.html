@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="32x32" href=".\img\S4-4-F.ico">
+
+    <title>Sky's Portfolio</title>
+    <!-- 됐나? -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #e8f6fb;
+            align-items: center; /* Note: This property is for flex containers, not applicable here */
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            background-color: #b8dbf1;
+            padding: 20px;
+            border-radius: 30px;
+        }
+
+        .grid-item {
+            background-color: #fff;
+            border: 2px solid #5fa0d6;
+            border-radius: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .grid-item img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .grid-item:hover {
+            transform: scale(0.99);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar-transparent {
+            background-color: #5fa0d6;
+            color: #fff;
+        }
+
+        .navbar-nav .nav-item.separator p {
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            font-size: 23px;
+        }
+
+        .typing-container {
+            font-size: 35px;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid;
+            animation: typing 3.6s steps(35, end), blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 112%;
+            }
+        }
+
+        footer {
+            background-color: #5fa0d6;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-icons {
+            margin-top: 10px;
+        }
+
+        .footer-icons svg {
+            margin: 0 5px;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%; /* Adjusted width for responsiveness */
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 30px;
+        }
+
+        .image-container img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay-text {
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+            background-color: rgba(255, 255, 255, 0);
+            padding: 20px;
+            max-width: calc(100% - 1px);
+            width: 100%;
+        }
+
+        .overlay-text h1, .overlay-text p {
+            margin: 0;
+            color: #333;
+        }
+
+        .overlay-text p {
+            font-size: 16px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-transparent">
+        <a class="navbar-brand" href="./sky_website.html"><img src=".\img\man6.png"><b> SKY's Portfolio</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about"><b>About Me</b></a>
+                </li>
+                <li class="nav-item separator">
+                    <p>|</p>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills"><b>Skills</b></a>
+                </li>
+                <li class="nav-item separator">
+                    <p>|</p>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#archiving"><b>Archiving</b></a>
+                </li>
+                <li class="nav-item separator">
+                    <p>|</p>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects"><b>Projects</b></a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+    <br><br>
+    <div id="home" class="container mt-5">
+        <div class="image-container">
+            <img src=".\img\blue4.png" alt="Chat Image" style="width:1000px; height:200px; ">
+            <div class="overlay-text">
+                <h1 class="typing-container" style="font-weight: bold; font-size: 35px; margin-bottom: 20px; margin-left: 40px">안녕하세요, 신입 프론트엔드 개발자 강하늘입니다.</h1>
+                <br>
+                <p style="font-size: 20px; margin-left: 100px; margin-bottom: 15px;" >저는 꾸준한 기록과 정리를 통해 지속적으로 성장하는 인재입니다.</p>
+            </div>
+        </div>
+        <br><br><br><br><br>
+        <section id="about">
+            <h1 style="font-weight: bold;" align="center">
+                About Me <span style="border-bottom: 1px solid;"></span></h2>
+                <div>
+                    <ul>
+                        <p><b class="grid-item" style="width:30%;">
+                            <img src="./img/name.png">| 강하늘</b>
+                            <b class="grid-item" style="width:30%;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="#5FA0D6" class="bi bi-cake2-fill" viewBox="0 0 16 16">
+                                  <img src="./img/birth.png">| 00.10.16<br></b>
+
+                                  <b class="grid-item" style="width:30%;">
+                                    <img src="./img/number.png">
+                                | 010-7318-2746</b> 
+                            </svg>
+                            <b class="grid-item" style="width:30%;">
+                                <img src="./img/mail.png">
+                            | yarasky@naver.com</b>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Skills -->
+                <section id="Skills">
+                    <h1 style="font-weight: bold;" align="center">Skills</h1>
+                    <div class="grid-container">
+                        <section class="grid-item">
+                            <div class="row">
+                                <div class="col">
+                                    <h3 style="border-bottom: 2px solid #ccc; font-weight: bold;" align="center">Front-End</h3>
+                                    <img src=".\img\F_img.png" alt="Front-End Image" style="width: 100%; max-width: 800px; height: auto;">
+                                </div>
+                            </div>
+                        </section>
+                        <section class="grid-item">
+                            <div class="row">
+                                <div class="col">
+                                    <h3 style="border-bottom: 2px solid #ccc; font-weight: bold;" align="center">Back-End</h3>
+                                    <img src=".\img\B_img.png" alt="Back-End Image" style="width: 100%; max-width: 800px; height: auto;">
+                                </div>
+                            </div>
+                        </section>
+                        <section class="grid-item">
+                            <div class="row">
+                                <div class="col">
+                                    <h3 style="border-bottom: 2px solid #ccc; font-weight: bold;" align="center">Communication</h3>
+                                    <img src=".\img\C_img2.png" alt="Communication Image" style="width: 100%; max-width: 800px; height: auto;">
+                                </div>
+                            </div>
+                        </section>
+                        <section class="grid-item">
+                            <div class="row">
+                                <div class="col">
+                                    <h3 style="border-bottom: 2px solid #ccc; font-weight: bold;" align="center">Version Control</h3>
+                                    <img src=".\img\V_img.png" alt="Version Control Image" style="width: 100%; max-width: 800px; height: auto;">
+                                </div>
+                            </div>
+                        </section>
+                        <section class="grid-item">
+                            <div class="row">
+                                <div class="col">
+                                    <h3 style="border-bottom: 2px solid #ccc; font-weight: bold;" align="center">Mobile App</h3>
+                                    <img src=".\img\M_img1.png" alt="Mobile App Image" style="width: 100%; max-width: 800px; height: auto;">
+                                </div>
+                            </div>
+                        </section>
+                        <section class="grid-item">
+                            <div class="row">
+                                <div class="col">
+                                    <h3 style="border-bottom: 2px solid #ccc; font-weight: bold;" align="center">Deployment</h3>
+                                    <img src=".\img\D_img.png" alt="Deployment Image" style="width: 100%; max-width: 800px; height: auto;">
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <br><br><br><br><br>
+        <!-- Archiving -->
+        <section id="archiving">
+            <br><br><br><br><br>
+            <h1 style="font-weight: bold;" align="center">Archiving</h1><br>
+            <div class="grid-item">
+                <i class="bi bi-github"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+              </svg> 
+              <h4>Github<p style="border-top: 2px solid;"></p></h4>
+              <a href="https://github.com/genjiskang/sky_Portfolio.git"><br>https://github.com/yarasky</a></p>
+          </div>
+      </div>
+  </div>
+  <br>
+  <div class="grid-item">
+    <div class="flex-container">       
+        <div>
+            <h5>Tistory</h5>
+            <p><a href="https://yarasky.tistory.com">https://yarasky.tistory.com</a></p>
+        </div>
+    </div>
+</div>
+<br>
+</section>
+<!-- Projects -->
+<section id="projects">
+    <br><br><br><br><br>
+    <h1 style="font-weight: bold;" align="center">Projects</h1>
+    <br>
+    <div class="grid-item">
+        <img src=".\img\starbucks250.png" alt="Starbucks Project Image">
+        <div class="grid-item-content">
+            <h5 style="font-weight: bold;">스타벅스 매장 입지전략과 시각화</h5>
+            <p>2024.03.08 ~ 2024.03.14 | 7일 (3人 미니 프로젝트)</p>
+            <p>BeautifulSoup을 사용하여 스타벅스 서울시 매장 목록 데이터를 크롤링하고 <br> 데이터 전처리 및 입지 전략 시각화</p>
+            <a href="file:///C:/Users/user/Desktop/%23%202%EC%A1%B0%20JPT&2P%20%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4%20%EB%A7%A4%EC%9E%A5%20%EC%9E%85%EC%A7%80%20%EC%A0%84%EB%9E%B5%EA%B3%BC%20%EC%8B%9C%EA%B0%81%ED%99%94.pdf" target="_blank"><span style="border-bottom: 2px solid #ccc; font-weight: bold">pdf 파일 열기</a>
+                <br>
+                <a href="file:///C:/Users/user/Desktop/%23%202%EC%A1%B0%20JPT&2P%20%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4%20%EB%A7%A4%EC%9E%A5%20%EC%9E%85%EC%A7%80%20%EC%A0%84%EB%9E%B5%EA%B3%BC%20%EC%8B%9C%EA%B0%81%ED%99%94.pdf" target="_blank">
+                    <a href="https://local-palm-bf0.notion.site/PORTFOLIO-3-da619361113c4b978162b52f6c0509b3?pvs=4">
+                        <span style="border-bottom: 2px solid #ccc; font-weight: bold">Notion 바로가기</a>
+                            <p><img src=".\img\check14.png" alt="check" ><b>주요 기능:</b> 스타벅스 매장 크롤링을 통해 서울시 스타벅스 매장의 위치를 찾고 입지 전략 시각화</p>
+                            <p><img src=".\img\check14.png" alt="check" ><b>Tools:</b> Python, Numpy, Pandas, Selenium, BeautifulSoup, Matplotlib</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="projects">
+                    <br>
+                    <div class="grid-item">
+                        <img src=".\img\ingu250.png" alt="Starbucks Project Image">
+                        <div class="grid-item-content">
+                            <h5 style="font-weight: bold;">인구소멸위기지역 시각화 및 인구소멸위기 원인 분석</h5>
+                            <p>2024년 04월 12일 ~ 2024년 04월 18일 | 7일 (4人 기본 프로젝트)</p>
+                            <p>BeautifulSoup을 사용하여 스타벅스 서울시 매장 목록 데이터를 크롤링하고 <br> 데이터 전처리 및 입지 전략 시각화</p>
+                            <a href=".pdf" target="_blank"><span style="border-bottom: 2px solid #ccc; font-weight: bold">pdf 파일 열기</a>
+                                <br>
+                                <a href="https://local-palm-bf0.notion.site/PORTFOLIO-4-a7a96651f0624fe79d0b25871ee68b46?pvs=4_blank"><span style="border-bottom: 2px solid #ccc; font-weight: bold">Notion 바로가기</a>
+                                    <p><img src=".\img\check14.png" alt="check" ><b>주요 기능:</b> </p>
+                                    <p><img src=".\img\check14.png" alt="check" ><b>Tools:</b> </p>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="projects">
+                            <br>
+                            <div class="grid-item">
+                                <div class="grid-item-content">
+                                    <h5 style="font-weight: bold;">KCA 전문 상담사 자격시험 출제관리 자동화 시스템 개발</h5>
+                                    <img src=".\img\kca250.png" alt="Starbucks Project Image" style="width: 500px; height: 300px;" >
+                                    <p>2024년 05월 31일 ~ 2024년 6월 28일 | 기획: 5일, 구현: 25일 (5人 핵심 프로젝트)</p>
+                                    <p>기존에 사용하던 프로그램은 출제위원이 문제를 직접 작성하는 불필요한 작업을 해야만 했으나<br> 출제 자동화 시스템을 통해 업무를 편리하게 처리할 수 있게 하고, <br> 출제위원 A와 B가 문항작성과 검토 과정에서 협업할 수 있는 커뮤니케이션 기능 제공</p>
+                                    <a href="file://C:/Users/user/Desktop/%EC%9D%B8%EA%B5%AC%EC%86%8C%EB%A9%B8%EC%9C%84%EA%B8%B0%EC%A7%80%EC%97%AD%20%EC%8B%9C%EA%B0%81%ED%99%94%20%EB%B0%8F%20%EC%9D%B8%EA%B5%AC%EC%86%8C%EB%A9%B8%EC%9C%84%EA%B8%B0%20%EC%9B%90%EC%9D%B8%20%EB%B6%84%EC%84%9D.pdf" target="_blank"><span style="border-bottom: 2px solid #ccc; font-weight: bold">pdf 파일 열기</a>
+                                        <br>
+                                        <a href="https://local-palm-bf0.notion.site/PORTFOLIO-5-b887c3b994384660947ede79721426e3?pvs=4_blank"><span style="border-bottom: 2px solid #ccc; font-weight: bold">Notion 바로가기</a>
+                                            <p><img src=".\img\check14.png" alt="check" ><b>주요 기능:</b> </p>
+                                            <p><img src=".\img\check14.png" alt="check" ><b>Tools:</b> </p>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section id="projects">
+                                    <br>
+                                    <div class="grid-item">
+                                        <img src=".png" alt="">
+                                        <div class="grid-item-content">
+                                            <h5 style="font-weight: bold;">프로젝트 주제</h5>
+                                            <p>내용</p>
+                                            <a href="file://C:/Users/user/Desktop/%EC%9D%B8%EA%B5%AC%EC%86%8C%EB%A9%B8%EC%9C%84%EA%B8%B0%EC%A7%80%EC%97%AD%20%EC%8B%9C%EA%B0%81%ED%99%94%20%EB%B0%8F%20%EC%9D%B8%EA%B5%AC%EC%86%8C%EB%A9%B8%EC%9C%84%EA%B8%B0%20%EC%9B%90%EC%9D%B8%20%EB%B6%84%EC%84%9D.pdf" target="_blank"><span style="border-bottom: 2px solid #ccc; font-weight: bold">pdf 파일 열기</a>
+                                                <br>
+                                                <a href="_blank"><span style="border-bottom: 2px solid #ccc; font-weight: bold">Notion 바로가기</a>
+                                                    <p><img src=".\img\check14.png" alt="check" ><b>주요 기능:</b> </p>
+                                                    <p><img src=".\img\check14.png" alt="check" ><b>Tools:</b> </p>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                    <br><br>
+                                    <footer class="Footer_Footer__5wlgh"><div class="Footer_icons__sgt9s"><div class="Footer_icon-wrapper___O2A_ Footer_bg-white__mYFhV" title="GitHub"></div>
+                                        <p>&copy; 2023 Sky's Portfolio. All Rights Reserved.</p>
+                                        <div class="footer-icons" style="align-items:center;">
+                                            <a href="https://github.com/genjiskang/sky_Portfolio">
+                                                <i class="bi bi-github"></i>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                                              </svg> 
+                                          </a>
+                                          <a href="#"><img src=".\img\notion-n.png" alt="notion" width="32" height="32" fill="currentColor"></a>
+                                          <a href="#"><img src=".\img\email-white.png" alt="Email" width="20"></a>
+                                      </div>
+                                  </div>
+                              </footer>
+                              <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                              <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+                              <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+                              <script>
+                                document.getElementById('canvaLink').addEventListener('click', function() {
+                                    window.open('https://www.canva.com/design/DAGCiEFwJyA/iT2EbLuy1Mc_BgBEqI9XXw/edit?utm_content=DAGCiEFwJyA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton', '_blank');
+                                    window.open('./인구소멸위기지역 시각화 및 인구소멸위기 원인 분석.pdf', '_blank');
+                                });
+
+                                document.addEventListener("DOMContentLoaded", function() {
+                                    const textElement = document.getElementById("text");
+                                    const textToType = "안녕하세요, 신입 프론트 엔드 개발자 강하늘입니다.";
+
+                                    let i = 0;
+                                    function type() {
+                                        if (i < textToType.length) {
+                                            textElement.textContent += textToType.charAt(i);
+                                            i++;
+                                            setTimeout(type, 112);
+                                        }
+                                    }
+                                    type();
+                                });
+                            </script>
+                        </body>
+                        </html>
