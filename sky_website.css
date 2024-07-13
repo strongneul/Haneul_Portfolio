@@ -1,0 +1,124 @@
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #e8f6fb;
+    align-items: center; /* Note: This property is for flex containers, not applicable here */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background-color: #b8dbf1;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.grid-item {
+    background-color: #fff;
+    border: 2px solid #5fa0d6;
+    border-radius: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 20px;
+    text-align: center;
+}
+
+.grid-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.grid-item:hover {
+    transform: scale(0.99);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-transparent {
+    background-color: #5fa0d6;
+    color: #fff;
+}
+
+.navbar-nav .nav-item.separator p {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 23px;
+}
+
+.typing-container {
+    font-size: 35px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    animation: typing 3.6s steps(35, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 112%;
+    }
+}
+
+footer {
+    background-color: #5fa0d6;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-icons {
+    margin-top: 10px;
+}
+
+.footer-icons svg {
+    margin: 0 5px;
+}
+
+.image-container {
+    position: relative;
+    width: 100%; /* Adjusted width for responsiveness */
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 30px;
+}
+
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 20px;
+    max-width: calc(100% - 1px);
+    width: 100%;
+}
+
+.overlay-text h1, .overlay-text p {
+    margin: 0;
+    color: #333;
+}
+
+.overlay-text p {
+    font-size: 16px;
+}
+
