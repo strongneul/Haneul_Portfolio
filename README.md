@@ -1,5 +1,5 @@
 # Hi, My Name is Haneul
-## It's a collection of the programming languages I'm interested in and the languages I can speak
+It's a collection of the programming languages I'm interested in and the languages I can speak
 
 ### OS
 https://img.shields.io/badge/Cent%20OS-262577?style=for-the-badge&logo=CentOS&logoColor=white
